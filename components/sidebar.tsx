@@ -16,6 +16,7 @@ import {
   SlidersHorizontal,
   X,
 } from 'lucide-react'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 const NAV = [
@@ -37,16 +38,19 @@ function NavContent({ onNavigate }: { onNavigate?: () => void }) {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center gap-2.5 border-b border-sidebar-border px-5 py-4">
-        <div className="flex size-9 items-center justify-center rounded-md bg-primary/15 text-primary ring-1 ring-primary/30">
-          <Mountain className="size-5" />
+      <div className="flex items-center justify-between border-b border-sidebar-border px-5 py-4">
+        <div className="flex items-center gap-2.5">
+          <div className="flex size-9 items-center justify-center rounded-md bg-primary/15 text-primary ring-1 ring-primary/30">
+            <Mountain className="size-5" />
+          </div>
+          <div className="leading-tight">
+            <p className="font-mono text-base font-bold tracking-[0.2em] text-sidebar-foreground">
+              AXOM
+            </p>
+            <p className="text-[10px] tracking-wide text-muted-foreground">RISK INTELLIGENCE</p>
+          </div>
         </div>
-        <div className="leading-tight">
-          <p className="font-mono text-base font-bold tracking-[0.2em] text-sidebar-foreground">
-            AXOM
-          </p>
-          <p className="text-[10px] tracking-wide text-muted-foreground">RISK INTELLIGENCE</p>
-        </div>
+        <ThemeToggle />
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto scrollbar-thin px-3 py-4">

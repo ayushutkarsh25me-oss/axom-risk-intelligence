@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Save } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { useTheme } from '@/components/theme-provider'
 import { useToast } from '@/components/toast'
 import { cn } from '@/lib/utils'
 
@@ -45,6 +46,7 @@ const CHANNELS = [
 ] as const
 
 export function SettingsClient() {
+  const { theme, setTheme } = useTheme()
   const { toast } = useToast()
   const [highThreshold, setHighThreshold] = useState(0.6)
   const [criticalThreshold, setCriticalThreshold] = useState(0.8)
@@ -151,6 +153,32 @@ export function SettingsClient() {
                 />
               </div>
             ))}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="border-b border-border/60">
+            <CardTitle className="text-sm">Appearance</CardTitle>
+            <p className="text-xs text-muted-foreground">
+              Dashboard visual presentation
+            </p>
+          </CardHeader>
+          <CardContent className="pt-4">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm font-medium">Dark theme</p>
+                <p className="text-xs text-muted-foreground text-pretty">
+                  {theme === 'dark'
+                    ? 'Command-centre dark palette with deep charcoal surfaces'
+                    : 'Clean high-contrast light palette for bright environments'}
+                </p>
+              </div>
+              <Toggle
+                checked={theme === 'dark'}
+                onChange={(dark) => setTheme(dark ? 'dark' : 'light')}
+                label="Dark theme"
+              />
+            </div>
           </CardContent>
         </Card>
 

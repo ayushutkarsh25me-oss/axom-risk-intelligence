@@ -31,7 +31,7 @@ export function RiskMap({
       <div className="absolute inset-0 bg-gradient-to-t from-[#0b111a]/80 via-transparent to-[#0b111a]/40" aria-hidden />
 
       {/* Coordinate graticule */}
-      <svg className="absolute inset-0 size-full text-primary/10" aria-hidden>
+      <svg className="absolute inset-0 size-full text-cyan-400/15 dark:text-primary/10" aria-hidden>
         <defs>
           <pattern id="grid" width="10%" height="12.5%" patternUnits="userSpaceOnUse">
             <path d="M 1000 0 L 0 0 0 1000" fill="none" stroke="currentColor" strokeWidth="1" />
@@ -41,15 +41,15 @@ export function RiskMap({
       </svg>
 
       {/* Corner coordinate readouts */}
-      <div className="pointer-events-none absolute left-3 top-3 font-mono text-[10px] text-primary/60">
+      <div className="pointer-events-none absolute left-3 top-3 font-mono text-[10px] text-cyan-400/80 dark:text-primary/60">
         28.7°N / 88.0°E
       </div>
-      <div className="pointer-events-none absolute bottom-3 right-3 font-mono text-[10px] text-primary/60">
+      <div className="pointer-events-none absolute bottom-3 right-3 font-mono text-[10px] text-cyan-400/80 dark:text-primary/60">
         22.4°N / 97.6°E
       </div>
 
       {/* Region label */}
-      <div className="pointer-events-none absolute left-1/2 top-3 -translate-x-1/2 rounded-md border border-border/60 bg-background/60 px-2.5 py-1 font-mono text-[10px] tracking-widest text-muted-foreground uppercase backdrop-blur-sm">
+      <div className="pointer-events-none absolute left-1/2 top-3 -translate-x-1/2 rounded-md border border-border/60 bg-card/85 px-2.5 py-1 font-mono text-[10px] tracking-widest text-foreground uppercase shadow-xs backdrop-blur-sm">
         North Eastern Region · Geospatial Grid
       </div>
 
@@ -100,12 +100,12 @@ export function RiskMap({
         })}
 
         <div className="pointer-events-none absolute bottom-3 left-3">
-          <Crosshair className="size-4 text-primary/40" />
+          <Crosshair className="size-4 text-cyan-400/60 dark:text-primary/40" />
         </div>
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border/60 bg-background/70 px-4 py-2.5 backdrop-blur-sm">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-border/60 bg-card/85 px-4 py-2.5 backdrop-blur-sm">
         <span className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wide text-muted-foreground uppercase">
           <Layers className="size-3.5" /> Risk
         </span>

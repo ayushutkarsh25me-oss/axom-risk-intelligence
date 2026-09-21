@@ -54,6 +54,62 @@
 }
 
 :root {
+  color-scheme: light;
+
+  /* Clean, crisp off-white command-centre canvas */
+  --background: oklch(0.975 0.005 245);
+  --foreground: oklch(0.18 0.02 250);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
+
+  --panel: oklch(0.96 0.006 245);
+  --panel-foreground: oklch(0.18 0.02 250);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+
+  /* Deep teal signal accent */
+  --primary: oklch(0.46 0.12 205);
+  --primary-foreground: oklch(0.99 0 0);
+
+  --secondary: oklch(0.93 0.008 245);
+  --secondary-foreground: oklch(0.2 0.02 250);
+
+  --muted: oklch(0.935 0.006 245);
+  --muted-foreground: oklch(0.48 0.02 245);
+
+  --accent: oklch(0.92 0.01 245);
+  --accent-foreground: oklch(0.18 0.02 250);
+
+  --destructive: oklch(0.55 0.22 25);
+
+  --border: oklch(0.88 0.01 245);
+  --input: oklch(0.88 0.01 245);
+  --ring: oklch(0.46 0.12 205);
+
+  /* Risk scale calibrated for high legibility on light background */
+  --risk-low: oklch(0.48 0.16 150);
+  --risk-moderate: oklch(0.55 0.16 75);
+  --risk-high: oklch(0.54 0.18 45);
+  --risk-critical: oklch(0.52 0.22 25);
+
+  --chart-1: oklch(0.46 0.12 205);
+  --chart-2: oklch(0.48 0.16 150);
+  --chart-3: oklch(0.55 0.16 75);
+  --chart-4: oklch(0.54 0.18 45);
+  --chart-5: oklch(0.52 0.22 25);
+
+  --radius: 0.5rem;
+
+  --sidebar: oklch(0.985 0.004 245);
+  --sidebar-foreground: oklch(0.18 0.02 250);
+  --sidebar-border: oklch(0.88 0.01 245);
+  --sidebar-accent: oklch(0.93 0.01 245);
+  --sidebar-accent-foreground: oklch(0.15 0.02 250);
+}
+
+.dark {
   color-scheme: dark;
 
   /* Deep navy / charcoal command-centre surfaces */
@@ -99,8 +155,6 @@
   --chart-3: oklch(0.82 0.15 90);
   --chart-4: oklch(0.72 0.17 55);
   --chart-5: oklch(0.6 0.22 25);
-
-  --radius: 0.5rem;
 
   --sidebar: oklch(0.195 0.02 252);
   --sidebar-foreground: oklch(0.9 0.01 240);

@@ -1,4 +1,5 @@
 import { DemoModeBadge } from '@/components/demo-mode-badge'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { LAST_UPDATED, NEXT_UPDATE } from '@/lib/data'
 
 export function StatusStrip() {
@@ -42,7 +43,10 @@ export function PageHeader({
             <p className="mt-1 text-sm text-muted-foreground text-pretty">{subtitle}</p>
           )}
         </div>
-        {actions && <div className="flex items-center gap-2">{actions}</div>}
+        <div className="flex items-center gap-2 self-end lg:self-start">
+          {actions}
+          <ThemeToggle />
+        </div>
       </div>
       {showStatus && <div className="mt-3">{<StatusStrip />}</div>}
     </header>
