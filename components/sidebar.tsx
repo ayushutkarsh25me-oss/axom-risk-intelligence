@@ -13,6 +13,7 @@ import {
   Menu,
   Mountain,
   Settings,
+  ShieldCheck,
   SlidersHorizontal,
   X,
 } from 'lucide-react'
@@ -22,6 +23,7 @@ import { cn } from '@/lib/utils'
 const NAV = [
   { label: 'Overview', href: '/', icon: LayoutDashboard },
   { label: 'Risk Map', href: '/risk-map', icon: Map },
+  { label: 'Safety Map', href: '/safety-map', icon: ShieldCheck },
   { label: 'Locations', href: '/locations', icon: MapPin },
   { label: 'Risk Analytics', href: '/analytics', icon: Activity },
   { label: 'Alerts', href: '/alerts', icon: BellRing },
